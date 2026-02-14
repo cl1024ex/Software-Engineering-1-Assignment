@@ -6,7 +6,7 @@ Built with **Flask (Python)**, **MongoDB**, and **server-rendered HTML/CSS**.
 ---
 
 ## Key features (MVP)
-### Public / Tourist
+### Non-registered user
 - Browse approved attractions
 - Search attractions by name (keyword search)
 - View attraction details
