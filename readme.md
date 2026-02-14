@@ -5,11 +5,6 @@ Built with **Flask (Python)**, **MongoDB**, and **server-rendered HTML/CSS**.
 
 ---
 
-## Project goal
-To propose, design, and develop a crowd-sourced **Minimum Viable Product (MVP)** of the Community Tourist Assistant platform that supports tourism growth while minimising administrative overhead, and present the solution to stakeholders.
-
----
-
 ## Key features (MVP)
 ### Public / Tourist
 - Browse approved attractions
@@ -45,19 +40,6 @@ To propose, design, and develop a crowd-sourced **Minimum Viable Product (MVP)**
 
 ---
 
-## Architecture (summary)
-The system uses a **web-based, layered client–server architecture**:
-- **Presentation layer:** HTML/CSS pages rendered by Flask templates
-- **Application layer:** Flask routes act as controllers and apply business rules (moderation, authentication)
-- **Data layer:** MongoDB stores users, admins, attractions, and reviews
-
-The backend follows an **MVC-style structure**:
-- **Models:** `User`, `Admin`, `Attractions`, `Reviews`
-- **Controllers:** Flask route functions (`@app.route`)
-- **Views:** HTML templates rendered
-
----
-
 ## Prerequisites
 - requirements.txt
 -pip install -r requirements.txt
@@ -67,6 +49,11 @@ The backend follows an **MVC-style structure**:
 ## Setup and run (local development)
 
 ### 1) Clone the repository
-```bash
 git clone <YOUR_REPO_URL>
 cd <YOUR_PROJECT_FOLDER>
+
+### 2) Create a virtual environment
+
+### 3) Install the requirements.txt
+
+### 4) Run application using Flask Run
