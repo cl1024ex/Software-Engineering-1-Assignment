@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="container d-flex justify-content-center">
+    <div class="card shadow-sm w-100" style="max-width:900px; min-height:800px;">
+        <div class="card-body p-4 p-md-5">
+            <h1 class="text-center mb-3">Welcome to Devon Tourist Attraction Site</h1>
+            <p class="lead text-center mb-4">You've found our website — the best place for local information.</p>
+
+            {% if session['username'] %}
+            <h3 class="text-center">Let's get started.</h3>
+            {% else %}
+            <p class="text-center">Already registered? <a href="{{ url_for('login') }}">Login</a></p>
+            {% endif %}
+
+            <hr>
+
+            <div class="mt-4">
+                <h3>About Us</h3>
+                <p>Devon Information Services is a local information service focused on attractions, events, and travel guidance around Devon.</p>
+                <p>Our mission is to help visitors and residents discover the best of the area with accurate, curated information.</p>
+            </div>
+
+    
+        </div>
+    </div>
+</div>
+
+{% endblock %}

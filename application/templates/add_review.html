@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div class="row">
+  <div class="col-md-6 offset-md-3">
+    <h2>Add Review for {{ attraction.name }}</h2>
+
+    {% if not session['username'] %}
+      <form method="POST">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" id="name" name="name">
+      </div>
+    {% endif %}
+    
+    <form method="POST">
+      <div class="form-group">
+        <label for="rating">Rating (1-10)</label>
+        <input type="number" class="form-control" id="rating" name="rating" min="1" max="10" required>
+      </div>
+
+      <div class="form-group">
+        <label for="review">Your Review</label>
+        <textarea class="form-control" id="review" name="review" rows="5" required></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Submit Review</button>
+      <a href="{{ url_for('attraction_detail', attraction_id=attraction.attractionID) }}" class="btn btn-secondary">Cancel</a>
+    </form>
+  </div>
+</div>
+
+{% endblock %}

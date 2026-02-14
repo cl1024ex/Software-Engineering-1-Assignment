@@ -1,0 +1,29 @@
+    <header>
+        <nav>
+            <ul class="nav nav-pills">
+                <li class="nav-item"><a href="{{ url_for('home') }}" class="nav-link {% if home %}active{% endif %}">Home</a></li>
+
+                <li class="nav-item"><a href="{{ url_for('browse') }}" class="nav-link {% if browse %}active{% endif %}">Browse Attractions</a></li> 
+
+                {% if not session['username'] %}
+                <li class="nav-item"><a href="{{ url_for('register') }}" class="nav-link {% if register %}active{% endif %}">Register</a></li>   
+                {% endif %}
+
+                {% if not session['username'] %}
+                <li class="nav-item"><a href="{{ url_for('login') }}" class="nav-link {% if login %}active{% endif %}">Login</a></li>
+                {% else %}
+                <li class="nav-item"><a href="{{ url_for('add_attraction') }}" class="nav-link {% if add_attraction %}active{% endif %}">Add Attraction</a></li>
+                <li class="nav-item"><a href="{{ url_for('my_pending') }}" class="nav-link {% if my_pending %}active{% endif %}">My Pending</a></li>
+                <li class="nav-item"><a href="{{ url_for('logout') }}" class="nav-link">Logout</a></li>
+                {% endif %}
+
+                {% if session ['username'] and session['is_admin'] %}
+                <li class="nav-item"><a href="{{ url_for('admin') }}" class="nav-link {% if admin %}active{% endif %}">Admin Panel</a></li>
+                {% endif %}
+
+
+                 
+            </ul>
+        </nav>
+        <hr style="clear:both">
+    </header>
