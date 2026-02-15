@@ -8,6 +8,7 @@ templates with the backend logic and database operations defined in the __init__
 
 """
 
+
 from application import app
 from flask import render_template, request, redirect, flash, url_for, session
 from application.models import User, Admin, Attractions, Reviews
