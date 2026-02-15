@@ -23,4 +23,3 @@ class RegisterForm (FlaskForm):
         user = User.objects(email=email.data).first()
         if user:
             raise ValidationError("Email already in use. Please use a different one")
-

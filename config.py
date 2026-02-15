@@ -8,4 +8,3 @@ class Config(object):
     MONGODB_SETTINGS = {'db': 'UTA_Enrollment'}
         # 'host': 'mongodb://localhost:27017/UTA_Enrollment'
 
-    
