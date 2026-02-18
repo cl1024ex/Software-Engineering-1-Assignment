@@ -9,5 +9,4 @@ app.config.from_object(Config)  # load config file
 db = MongoEngine()  # instantiate class
 db.init_app(app)
 
-
 from application import route

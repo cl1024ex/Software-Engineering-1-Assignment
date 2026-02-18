@@ -195,7 +195,6 @@ def logout():
     session.pop('is_admin', None)
     return redirect(url_for('home'))
 
-
 @app.route("/browse")
 def browse():
     """
