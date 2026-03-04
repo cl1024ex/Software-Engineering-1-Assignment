@@ -48,12 +48,12 @@ Built with **Flask (Python)**, **MongoDB**, and **HTML/CSS**.
 
 ## Setup and run (local development)
 
-# 1) Clone the repository
+#### 1) Clone the repository
 git clone (repo link)
 
-# 2) Create a virtual environment
+#### 2) Create a virtual environment
 
-# 3) Install the requirements.txt
+#### 3) Install the requirements.txt
 
-# 4) Run application using Flask Run
+#### 4) Run application using Flask Run
 
