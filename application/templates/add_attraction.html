@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div class="container d-flex justify-content-center">
+  <div class="card w-100 shadow-sm" style="max-width:900px; min-height:1000px;">
+    <div class="card-body p-4">
+      <h2 class="text-center mb-3">Add New Attraction</h2>
+      <form method="POST" enctype="multipart/form-data">
+        <div class="mb-3">
+          <label for="attraction_name" class="form-label">Attraction Name</label>
+          <input type="text" class="form-control" id="attraction_name" name="attraction_name" required>
+        </div>
+
+        <div class="mb-3">
+          <label for="description" class="form-label">Description</label>
+          <textarea class="form-control" id="description" name="description" rows="6" required></textarea>
+        </div>
+
+        <div class="mb-3">
+          <label for="location" class="form-label">Location</label>
+          <input type="text" class="form-control" id="location" name="location">
+        </div>
+
+        <div class="mb-3">
+          <label for="image" class="form-label">Image</label>
+          <input type="file" class="form-control" id="image" name="image" accept="image/*">
+        </div>
+
+        <div class="text-center mt-4">
+          <button type="submit" class="btn btn-primary">Submit Attraction</button>
+          <a href="{{ url_for('browse') }}" class="btn btn-secondary ms-2">Cancel</a>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

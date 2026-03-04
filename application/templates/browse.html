@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div class="container d-flex justify-content-center">
+    <div class="card w-100 shadow-sm" style="max-width:1100px; min-height:800px;">
+        <div class="card-body p-4">
+            <div class="row mb-3">
+                <div class="col-md-12">
+                    <h2>Browse Attractions</h2>
+                    <form method="get" action="{{ url_for('browse') }}" class="mb-3">
+                        <div class="input-group">
+                            <input type="text" name="search" class="form-control" placeholder="Search attractions..." value="{{ request.args.get('search', '') }}">
+                            <button type="submit" class="btn btn-primary">Search</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="d-flex flex-wrap justify-content-start" style="gap:20px;">
+                        {% for attraction in attractions %}
+                        <div class="card" style="width:220px;">
+                            {% if attraction.image %}
+                                <img src="{{ url_for('static', filename=attraction.image) }}" class="card-img-top" style="height:140px; object-fit:cover;" alt="{{ attraction.name }}">
+                            {% else %}
+                                <div class="card-img-top" style="height:140px; background:#f0f0f0; display:flex; align-items:center; justify-content:center;">No Image</div>
+                            {% endif %}
+                            <div class="card-body p-2 text-center">
+                                <a href="{{ url_for('attraction_detail', attraction_id=attraction.attractionID) }}" class="stretched-link">{{ attraction.name }}</a>
+                            </div>
+                        </div>
+                        {% else %}
+                        <div class="w-100 text-center py-5">
+                            <h3>No attractions</h3>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+{% endblock %}

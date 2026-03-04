@@ -1,14 +1,14 @@
 # Community Tourist Assistant (MVP)
 
 A crowd-sourced tourist information platform that allows tourists to browse attractions, registered users to submit attractions and reviews, and administrators to moderate content.  
-Built with **Flask (Python)**, **MongoDB**, and **server-rendered HTML/CSS**.
+Built with **Flask (Python)**, **MongoDB**, and **HTML/CSS**.
 
 ---
 
 ## Key features (MVP)
 ### Non-registered user
 - Browse approved attractions
-- Search attractions by name (keyword search)
+- Search attractions
 - View attraction details
 - View reviews for attractions
 - Report inappropriate reviews
@@ -16,23 +16,23 @@ Built with **Flask (Python)**, **MongoDB**, and **server-rendered HTML/CSS**.
 ### Registered user
 - Register and log in
 - Submit a new attraction (saved as **pending** until approved)
-- Upload an image for an attraction (stored locally in `static/images/`)
+- Upload an image for an attraction 
 - View and manage own pending/rejected attractions
-- Edit rejected/pending attractions (resubmits for approval)
+- Edit rejected/pending attractions
 - Delete pending attractions
-- Submit reviews and ratings (1–5)
+- Submit reviews and ratings
 
 ### Administrator
-- View moderation page
+- View administrator page
 - Approve or reject pending attractions
-- Promote users to admin / remove admin role
+- Manage admin privileges
 - Review reported reviews (approve/reject/delete)
 
 ---
 
 ## Tech stack
-- **Backend:** Flask (Python)
-- **Database:** MongoDB (local or MongoDB Atlas)
+- **Backend:** Flask
+- **Database:** MongoDB
 - **Frontend:** HTML templates + CSS
 - **Auth:** session-based login
 - **File handling:** image uploads saved under `static/images/`
@@ -57,3 +57,4 @@ cd <YOUR_PROJECT_FOLDER>
 ### 3) Install the requirements.txt
 
 ### 4) Run application using Flask Run
+

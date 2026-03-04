@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div class="row">
+  <div class="col-md-6 offset-md-3">
+    <h2>Edit Attraction</h2>
+    
+    <form method="POST" enctype="multipart/form-data">
+      <div class="form-group">
+        <label for="attraction_name">Attraction Name</label>
+        <input type="text" class="form-control" id="attraction_name" name="attraction_name" value="{{ attraction.name }}" required>
+      </div>
+
+      <div class="form-group">
+        <label for="description">Description</label>
+        <textarea class="form-control" id="description" name="description" rows="5" required>{{ attraction.description }}</textarea>
+      </div>
+
+       <div class="form-group">
+        <label for="location">Location</label>
+        <input type="text" class="form-control" id="location" name="location" value="{{ attraction.location }}">
+      </div>
+
+      <div class="form-group">
+        <label for="image">Image</label>
+        {% if attraction.image %}
+          <div class="mb-2">
+            <img src="{{ url_for('static', filename=attraction.image) }}" style="width:200px; height:150px; object-fit:cover;" alt="{{ attraction.name }}">
+            <p><small>Current image</small></p>
+          </div>
+        {% endif %}
+        <input type="file" class="form-control" id="image" name="image" accept="image/*">
+        <small class="form-text text-muted">Leave empty to keep current image</small>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Save Changes</button>
+      <a href="{{ url_for('my_pending') }}" class="btn btn-secondary">Cancel</a>
+    </form>
+  </div>
+</div>
+
+{% endblock %}
