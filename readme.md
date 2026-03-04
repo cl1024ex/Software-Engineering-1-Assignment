@@ -49,7 +49,7 @@ Built with **Flask (Python)**, **MongoDB**, and **HTML/CSS**.
 ## Setup and run
 
 #### 1) Clone the repository
-git clone (repo link)
+`git clone (repo link)`
 
 #### 2) Create a virtual environment
 
