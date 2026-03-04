@@ -46,7 +46,7 @@ Built with **Flask (Python)**, **MongoDB**, and **HTML/CSS**.
 
 ---
 
-## Setup and run (local development)
+## Setup and run
 
 #### 1) Clone the repository
 git clone (repo link)
