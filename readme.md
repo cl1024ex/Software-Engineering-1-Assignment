@@ -42,7 +42,7 @@ Built with **Flask (Python)**, **MongoDB**, and **HTML/CSS**.
 
 ## Prerequisites
 - requirements.txt
--pip install -r requirements.txt
+`pip install -r requirements.txt`
 
 ---
 
